@@ -1,4 +1,7 @@
 -- Mapping data with "desc" stored directly by vim.keymap.set().
+-- vim.keymap.set('n', '<leader>c', require('osc52').copy_operator, {expr = true})
+-- vim.keymap.set('n', '<leader>cc', '<leader>c_', {remap = true})
+-- vim.keymap.set('v', '<leader>c', require('osc52').copy_visual)
 --
 -- Please use this mappings table to set keyboard mapping since this is the
 -- lower level configuration and more robust one. (which-key will
@@ -45,5 +48,13 @@ return {
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+  },
+  v = {
+    ["Y"] = {
+      function()
+        require('osc52').copy_visual()
+      end,
+      desc = "OSC 52 yank",
+    },
   },
 }
