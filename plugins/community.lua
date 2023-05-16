@@ -5,5 +5,26 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   -- { import = "astrocommunity.colorscheme.catppuccin" },
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  -- { -- further customize the options set by the community
+  --   "copilot.lua",
+  --   opts = {
+  --     suggestion = {
+  --       keymap = {
+  --         accept = "<C-l>",
+  --         accept_word = false,
+  --         accept_line = false,
+  --         next = "<C-.>",
+  --         prev = "<C-,>",
+  --         dismiss = "<C/>",
+  --       },
+  --     },
+  --   },
+  -- },
+  { import = "astrocommunity.editing-support.auto-save-nvim" },
+  -- { -- further customize the options set by the community
+  --   "auto-save-nvim",
+  --   event = { "User AstroFile", "InsertEnter" },
+  -- }
+  { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
 }
