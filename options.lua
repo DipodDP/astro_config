@@ -1,6 +1,8 @@
 -- set vim options here (vim.<first_key>.<second_key> = value)
 return {
   opt = {
+    -- set termguicolors to enable highlight groups
+    termguicolors = true,
     -- set to true or false etc.
     relativenumber = true, -- sets vim.opt.relativenumber
     number = true,         -- sets vim.opt.number
@@ -10,6 +12,9 @@ return {
     colorcolumn = "80"     -- sets vim.opt.colorcolumn
   },
   g = {
+    -- disable netrw at the very start of your init.lua (strongly advised)
+    loaded_netrw = 1,
+    loaded_netrwPlugin = 1,
     mapleader = " ",                 -- sets vim.g.mapleader
     autoformat_enabled = true,       -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
     cmp_enabled = true,              -- enable completion at start

@@ -23,6 +23,10 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    -- Nvim-tree
+    ["<leader>e"] = { "<cmd>NvimTreeToggle<cr>", desc = "NvimTree toggle" },
+    ["<leader>o"] = { "<cmd>NvimTreeFocus<cr>", desc = "NvimTree focus" },
+    ["<leader>O"] = { "<cmd>NvimTreeFindFileToggle<cr>", desc = "Find in NvimTree" },
   },
   t = {
     -- setting a mapping to false will disable it
