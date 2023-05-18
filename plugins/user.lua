@@ -1,4 +1,6 @@
 return {
+  -- You can disable default plugins as follows:
+  { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
