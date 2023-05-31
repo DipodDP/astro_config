@@ -24,11 +24,22 @@ return {
   diagnostics = {
     virtual_text = true,
     underline = true,
+    virtual_text = {
+      prefix = '●'
+    },
+    update_in_insert = true,
+    float = {
+      source = "always", -- or "if_many"
+    },
   },
 
   lsp = {
     -- customize lsp formatting options
     formatting = {
+      format = function(entry, vim_item)
+        vim_item.abbr = string.sub(vim_item.abbr, 1, 15)
+        return vim_item
+      end,
       -- control auto formatting on save
       format_on_save = {
         enabled = true,     -- enable or disable format on save globally
@@ -43,7 +54,7 @@ return {
         -- "sumneko_lua",
       },
       timeout_ms = 1000, -- default format timeout
-      -- filter = function(client) -- fully override the default formatting function
+-- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
     },
@@ -84,4 +95,38 @@ return {
     --   },
     -- }
   end,
+
+  plugins = {
+    { -- override nvim-autopairs plugin
+      "windwp/nvim-autopairs",
+      config = function(plugin, opts)
+        -- run default AstroNvim config
+        require "plugins.configs.nvim-autopairs"(plugin, opts)
+        -- require Rule function
+        local Rule = require "nvim-autopairs.rule"
+        local npairs = require "nvim-autopairs"
+        npairs.add_rules {
+          {
+            -- specify a list of rules to add
+            Rule(" ", " "):with_pair(function(options)
+              local pair = options.line:sub(options.col - 1, options.col)
+              return vim.tbl_contains({ "()", "[]", "{}" }, pair)
+            end),
+            Rule("( ", " )")
+              :with_pair(function() return false end)
+              :with_move(function(options) return options.prev_char:match ".%)" ~= nil end)
+              :use_key ")",
+            Rule("{ ", " }")
+              :with_pair(function() return false end)
+              :with_move(function(options) return options.prev_char:match ".%}" ~= nil end)
+              :use_key "}",
+            Rule("[ ", " ]")
+              :with_pair(function() return false end)
+              :with_move(function(options) return options.prev_char:match ".%]" ~= nil end)
+              :use_key "]",
+          },
+        }
+      end,
+    },
+  },
 }

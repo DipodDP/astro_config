@@ -21,6 +21,7 @@ return {
     showbreak = "﬌ ",
 -- =======
     -- wrap = false, -- sets vim.opt.wrap
+    colorcolumn = "80"     -- sets vim.opt.colorcolumn
 -- >>>>>>> 3492639 (Initial commit)
   },
   g = {
@@ -38,7 +39,7 @@ return {
 --     spell = false,         -- sets vim.opt.spell
 --     signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
 --     wrap = false,          -- sets vim.opt.wrap
-    colorcolumn = "80"     -- sets vim.opt.colorcolumn
+    -- colorcolumn = "80"     -- sets vim.opt.colorcolumn
 --   },
 --   g = {
 --     mapleader = " ",                 -- sets vim.g.mapleader
