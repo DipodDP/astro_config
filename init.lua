@@ -60,8 +60,12 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      -- "pyright",
+      -- "pylsp"
     },
+    config = {
+      -- pyright = {}
+    }
   },
 
   -- Configure require("lazy").setup() options
