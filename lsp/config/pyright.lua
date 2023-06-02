@@ -1,7 +1,7 @@
 return {
   -- Removing duplication comes from "hint", which pyright does not considered
-  -- to be a type of diagnostics but neovim does. 
-  -- That's why all the pyright config tweaks does not suppress those 
+  -- to be a type of diagnostics but neovim does.
+  -- That's why all the pyright config tweaks does not suppress those
   -- "not accessed hint".
   -- capabilities = (function()
   --   local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -25,12 +25,13 @@ return {
         -- typeCheckingMode = "off",
         -- diagnosticMode = "workspace",
         diagnosticSeverityOverrides = {
-          reportUndefinedVariable = "none",
-        --   reportUnusedImport = "warning",
-        --   reportUnusedClass = "warning",
-        --   reportunusedfunction = "warning",
-        --   reportUnusedVariable = "warning",
-        }
+          reportMissingTypeStubs = true,
+          --   reportUndefinedVariable = "warning",
+          --   reportUnusedImport = "warning",
+          --   reportUnusedClass = "warning",
+          --   reportunusedfunction = "warning",
+          --   reportUnusedVariable = "warning",
+        },
       },
     },
   },
