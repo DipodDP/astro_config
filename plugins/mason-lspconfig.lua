@@ -10,7 +10,7 @@ return {
       "marksman",
       "jsonls",
       "pyright",
-      "sqls",
+      -- "sqls",
       -- "sumneko_lua",
       -- "lua_ls",
       "tsserver",
