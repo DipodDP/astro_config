@@ -1,4 +1,5 @@
-return { -- this table overrides highlights in all themes
+return {
+  -- this table overrides highlights in all themes
   -- Normal = { bg = "#000000" },
   BufferLineTabClose = { fg = "#1e222a", bg = "#1e222a" },
   BufferLineBufferSelected = { fg = "#abb2bf", bg = "#1e222a" },
