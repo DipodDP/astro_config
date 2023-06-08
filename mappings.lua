@@ -36,6 +36,8 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    -- blackhole deletion
+    ["<leader>D"] = { '"_d', desc = "Delete in blackhole register", noremap = true },
 -- >>>>>>> 3492639 (Initial commit)
   },
   t = {
@@ -43,10 +45,11 @@ return {
     -- ["<esc>"] = false,
   },
   v = {
+    -- deleting to register "d" in visual mode (useful with SyncUnnamedplusRegister autocommand)
+    ["d"] = { '"1d', desc = "Delete in register d (visual mode)", noremap = true },
+    ["D"] = { '"_D', desc = "Delete line in register d (visual mode)", noremap = true },
+    ["<leader>D"] = { '"_d', desc = "Delete in blackhole register", noremap = true },
     ["Y"] = {
-      -- vim.keymap.set('n', '<leader>c', require('osc52').copy_operator, {expr = true})
-      -- vim.keymap.set('n', '<leader>cc', '<leader>c_', {remap = true})
-      -- vim.keymap.set('v', '<leader>c', require('osc52').copy_visual)
       function()
         require('osc52').copy_visual()
       end,

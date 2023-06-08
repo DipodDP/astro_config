@@ -1,13 +1,7 @@
 return {
   "gbprod/yanky.nvim",
   enabled = true,
-  -- lazy = false,
-  event = "UIEnter",
-  -- version = "*",
-  -- dependencies = {
-  --   "nvim-tree/nvim-web-devicons",
-  -- },
-
+  event = "BufEnter",
   config = function()
     require("yanky").setup {
       preserve_cursor_position = {
