@@ -5,4 +5,21 @@ return {
     auto_install = true,
     -- ensure_installed = { "lua" },
   },
+
+  dependencies = {
+    {
+      "mrjones2014/nvim-ts-rainbow",
+      config = function()
+        require("nvim-treesitter.configs").setup {
+          rainbow = {
+            enable = true,
+          },
+        }
+      end,
+    },
+    {
+      "nvim-treesitter/playground",
+      cmd = "TSPlaygroundToggle",
+    },
+  },
 }
