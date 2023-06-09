@@ -46,8 +46,8 @@ return {
   },
   v = {
     -- deleting to register "d" in visual mode (useful with SyncUnnamedplusRegister autocommand)
-    ["d"] = { '"1d', desc = "Delete in register d (visual mode)", noremap = true },
-    ["D"] = { '"_D', desc = "Delete line in register d (visual mode)", noremap = true },
+    ["d"] = { '"1d', desc = "Delete (visual mode)", noremap = true },
+    ["D"] = { '"1D', desc = "Delete line (visual mode)", noremap = true },
     ["<leader>D"] = { '"_d', desc = "Delete in blackhole register", noremap = true },
     ["Y"] = {
       function()
