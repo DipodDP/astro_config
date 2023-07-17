@@ -4,14 +4,14 @@ return {
   opts = {
     automatic_installation = true,
     ensure_installed = {
-      "clangd",
+      -- "clangd",
       "cssls",
       "html",
       "marksman",
       "jsonls",
       "pyright",
       "sqlls",
-      "lua_ls",
+      -- "lua_ls",
       "tsserver",
       "yamlls",
     },
