@@ -4,6 +4,15 @@ return {
     -- Automatically install missing parsers when entering buffer
     auto_install = true,
     -- ensure_installed = { "lua" },
+    incremental_selection = {
+      enable = true,
+      keymaps = {
+        init_selection = '<c-space>',
+        node_incremental = '<c-space>',
+        scope_incremental = '<c-s>',
+        node_decremental = '<M-space>',
+      },
+    },
   },
 
   dependencies = {
