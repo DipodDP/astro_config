@@ -9,6 +9,11 @@ vim.api.nvim_create_autocmd(
 vim.cmd([[
   augroup SyncUnnamedRegister
     autocmd!
-      autocmd TextYankPost * if !v:event.visual || v:event.operator == 'c' | let @+ = @0 |  endif
+      " for only deleting not in visual mode:
+      " autocmd TextYankPost * if !v:event.visual || v:event.operator == 'c' | let @+ = @0 |  endif
+      " for only replacing with pasting:
+      " autocmd TextYankPost * if v:event.visual || v:event.operator == 'd' | let @+ = @0 |  endif
+      " for both ever:
+      autocmd TextYankPost * if v:event.operator == 'c' || v:event.operator == 'd' | let @+ = @0 |  endif
   augroup END
 ]])
