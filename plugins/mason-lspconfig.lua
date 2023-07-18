@@ -4,7 +4,7 @@ return {
   opts = {
     automatic_installation = true,
     ensure_installed = {
-      -- "clangd",
+      "clangd",
       "cssls",
       "html",
       "marksman",
