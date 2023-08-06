@@ -11,7 +11,7 @@ return {
       "jsonls",
       "pyright",
       "sqlls",
-      "lua_ls",
+      -- "lua_ls",
       "tsserver",
       "yamlls",
     },
