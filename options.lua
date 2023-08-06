@@ -1,6 +1,8 @@
 return {
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   opt = {
+    -- set termguicolors to enable highlight groups
+    termguicolors = true,
     -- set to true or false etc.
     relativenumber = true,                   -- sets vim.opt.relativenumber
     number = true,                           -- sets vim.opt.number

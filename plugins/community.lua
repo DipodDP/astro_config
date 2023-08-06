@@ -6,6 +6,8 @@ return {
 
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.editing-support.auto-save-nvim" },
+  { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
   -- { -- further customize the options set by the community
   --   "copilot.lua",
   --   opts = {
@@ -20,11 +22,9 @@ return {
   --       },
   --     },
   --   },
-  -- },
-  { import = "astrocommunity.editing-support.auto-save-nvim" },
-  -- { -- further customize the options set by the community
   --   "auto-save-nvim",
-  --   event = { "User AstroFile", "InsertEnter" },
-  -- }
-  { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
+  --   opts = {
+  --     event = { "User AstroFile", "InsertEnter" },
+  --   },
+  -- },
 }
