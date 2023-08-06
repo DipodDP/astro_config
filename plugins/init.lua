@@ -1,7 +1,7 @@
 return {
   -- You can disable default plugins as follows:
   { "goolord/alpha-nvim",           enabled = false },
-  { "max397574/better-escape.nvim", enabled = false },
+  { "max397574/better-escape.nvim", enabled = true },
   -- You can also add new plugins here as well:
   { "lvimuser/lsp-inlayhints.nvim", config = true },
   {
