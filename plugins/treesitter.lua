@@ -53,6 +53,11 @@ return {
     },
     rainbow = {
       enable = true,
+      query = {
+        'rainbow-parens',
+        tsx = 'rainbow-parens-react',
+        latex = 'rainbow-blocks',
+    }
       -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
     }
   },
